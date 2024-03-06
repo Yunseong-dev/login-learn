@@ -1,6 +1,6 @@
-package com.example.login.main.usersignin.authentication;
+package com.example.login.main.auth.authentication;
 
-import com.example.login.main.usersignup.model.User;
+import com.example.login.main.user.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

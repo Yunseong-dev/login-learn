@@ -1,7 +1,7 @@
-package com.example.login.main.usersignin.config;
+package com.example.login.main.auth.config;
 
-import com.example.login.main.usersignin.filter.JwtAuthenticationFilter;
-import com.example.login.main.usersignin.provider.JwtAuthenticationProvider;
+import com.example.login.main.auth.filter.JwtAuthenticationFilter;
+import com.example.login.main.auth.provider.JwtAuthenticationProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

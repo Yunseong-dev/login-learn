@@ -1,6 +1,6 @@
-package com.example.login.main.usersignin.filter;
+package com.example.login.main.auth.filter;
 
-import com.example.login.main.usersignin.authentication.JwtAuthentication;
+import com.example.login.main.auth.authentication.JwtAuthentication;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

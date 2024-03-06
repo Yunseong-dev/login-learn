@@ -1,8 +1,8 @@
-package com.example.login.main.usersignin.provider;
+package com.example.login.main.auth.provider;
 
 
-import com.example.login.main.usersignin.authentication.JwtAuthentication;
-import com.example.login.main.usersignup.model.User;
+import com.example.login.main.auth.authentication.JwtAuthentication;
+import com.example.login.main.user.model.User;
 import com.example.login.main.util.JwtUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationProvider;

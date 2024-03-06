@@ -1,6 +1,6 @@
 package com.example.login.main.util;
 
-import com.example.login.main.usersignup.model.User;
+import com.example.login.main.user.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

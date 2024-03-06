@@ -1,10 +1,10 @@
-package com.example.login.main.usersignin.dto;
+package com.example.login.main.auth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class SignInResultDto {
+public class AuthResultDto {
     private String token;
 }

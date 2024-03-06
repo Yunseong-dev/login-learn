@@ -1,6 +1,6 @@
-package com.example.login.main.usersignin.service;
+package com.example.login.main.auth.service;
 
-import com.example.login.main.usersignup.repository.UserRepository;
+import com.example.login.main.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

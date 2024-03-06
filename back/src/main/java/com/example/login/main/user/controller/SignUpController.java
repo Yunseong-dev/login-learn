@@ -1,9 +1,9 @@
-package com.example.login.main.usersignup.controller;
+package com.example.login.main.user.controller;
 
 
-import com.example.login.main.usersignup.dto.CreateUserDto;
-import com.example.login.main.usersignup.model.User;
-import com.example.login.main.usersignup.service.SignUpService;
+import com.example.login.main.user.dto.CreateUserDto;
+import com.example.login.main.user.model.User;
+import com.example.login.main.user.service.SignUpService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

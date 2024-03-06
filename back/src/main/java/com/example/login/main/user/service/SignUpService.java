@@ -1,12 +1,14 @@
-package com.example.login.main.usersignup.service;
+package com.example.login.main.user.service;
 
-import com.example.login.main.usersignup.dto.CreateUserDto;
-import com.example.login.main.usersignup.model.User;
-import com.example.login.main.usersignup.repository.UserRepository;
+import com.example.login.main.user.dto.CreateUserDto;
+import com.example.login.main.user.model.User;
+import com.example.login.main.user.repository.UserRepository;
 import com.example.login.main.util.JwtUtil;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 
@@ -20,7 +22,9 @@ public class SignUpService {
     public User createUser(CreateUserDto dto) {
         LocalDateTime now = LocalDateTime.now();
         if (userRepository.existsById(dto.getId())) {
-            throw new IllegalArgumentException("이미 존재하는 아이디입니다.");
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST, "이미 존재하는 아이디입니다."
+            );
         }
 
         User user = new User(

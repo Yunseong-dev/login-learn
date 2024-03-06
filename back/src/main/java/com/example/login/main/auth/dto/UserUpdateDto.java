@@ -1,13 +1,13 @@
-package com.example.login.main.usersignup.dto;
+package com.example.login.main.auth.dto;
 
 import lombok.Getter;
 
 import java.time.LocalDateTime;
 
 @Getter
-public class CreateUserDto {
-    private String name;
+public class UserUpdateDto {
     private String id;
+    private String name;
     private String email;
     private String password;
     private LocalDateTime updatedAt;
