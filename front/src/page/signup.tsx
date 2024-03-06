@@ -1,9 +1,9 @@
-import { AxiosResponse } from "axios";
 import { customAxios } from "../utils/axios";
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+  const pk = 0;
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,15 +28,15 @@ const SignIn = () => {
 
       alert('회원가입이 완료되었습니다. 다시 로그인하여주세요.');
       navigate('/signin');
-    }catch (error: any) {
+    } catch (error: any) {
       console.error('회원가입 중 오류 발생', error);
       if (error?.response?.status === 400) {
-          alert(error.response.data.message);
+        alert(error.response.data.message);
       } else {
-          alert('회원가입 중 오류가 발생했습니다.');
+        alert(error.response.data.message);
       }
-  }
-  
+    }
+
   };
 
   const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {

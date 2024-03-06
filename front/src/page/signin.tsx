@@ -27,7 +27,7 @@ const SignIn = () => {
     }
 
     try {
-      const response = await customAxios.post('/signin', {
+      const response = await customAxios.post('/user', {
         id,
         password
       });
@@ -40,7 +40,7 @@ const SignIn = () => {
       if (axios.isAxiosError(error)) {
         const response = error.response;
         if (response?.status === 400) {
-          alert(response?.data.message);
+          alert("아이디 또는 비밀번호가 틀렸습니다.");
         } else {
           alert("로그인 중 알 수 없는 오류가 발생했습니다.");
         }
