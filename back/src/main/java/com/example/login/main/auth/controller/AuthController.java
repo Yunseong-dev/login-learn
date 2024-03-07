@@ -2,7 +2,6 @@ package com.example.login.main.auth.controller;
 
 import com.example.login.main.auth.dto.UserUpdateDto;
 import com.example.login.main.user.model.User;
-import com.example.login.main.auth.dto.PasswordChackDto;
 import com.example.login.main.auth.dto.AuthDto;
 import com.example.login.main.auth.dto.AuthResultDto;
 import com.example.login.main.auth.service.AuthService;
