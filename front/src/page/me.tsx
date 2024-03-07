@@ -1,7 +1,7 @@
 import useToken from "../hooks/userToken";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { customAxios } from "../utils/axios";
+import { customAxios, fetcherWithToken } from "../utils/axios";
 
 const me = () => {
   const { token, setToken } = useToken();
@@ -13,15 +13,11 @@ const me = () => {
 
   useEffect(() => {
     if (token) {
-      axios.get('http://localhost:8080/user/userinfo', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-        .then((response) => {
-          setId(response.data.id);
-          setName(response.data.name);
-          setEmail(response.data.email);
+      fetcherWithToken(token, '/user/userinfo')
+        .then((data) => {
+          setId(data.id);
+          setName(data.name);
+          setEmail(data.email);
         })
         .catch((error) => {
           console.error(error);

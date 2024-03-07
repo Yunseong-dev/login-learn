@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import useToken from "../hooks/userToken";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { fetcherWithToken } from "../utils/axios";
 
 const Main = () => {
   const { token, removeToken } = useToken();
@@ -9,17 +9,13 @@ const Main = () => {
 
   useEffect(() => {
     if (token) {
-      axios.get('http://localhost:8080/user/userinfo', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-      .then((response) => {
-        setName(response.data.name);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+      fetcherWithToken(token, '/user/userinfo')
+        .then((data) => {
+          setName(data.name);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
   }, [token]);
 
