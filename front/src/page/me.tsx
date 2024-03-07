@@ -25,7 +25,7 @@ const me = () => {
     }
   }, [token]);
 
-  const passwordChack = async (e: { preventDefault: () => void; }) => {
+  const updateUser = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     if (!repassword) {
@@ -68,7 +68,7 @@ const me = () => {
 
   return (
     <div>
-      <form onSubmit={passwordChack}>
+      <form onSubmit={updateUser}>
         <input type="text" value={id} disabled />
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
