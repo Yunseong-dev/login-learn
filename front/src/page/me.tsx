@@ -43,31 +43,25 @@ const me = () => {
       return;
     }
 
-    if(name === null || email === null){
+    if (name === null || email === null) {
       alert("이름 또는 이메일을 입력하세요.")
       return;
     }
 
     try {
-      const response = await customAxios.post('/user/PC', {
+      const response = await customAxios.post('/user/Change', {
         id,
+        name,
+        email,
+        password,
         repassword
       });
 
       const token = response.data.token;
       setToken(token);
-      try{
-        const response = await customAxios.post('/user/Change', {
-          id,
-          name,
-          email,
-          password
-        });
-        alert("회원정보가 수정되었습니다.");
-        window.location.reload();
+      alert("회원정보가 수정되었습니다.");
+      window.location.reload();
 
-      }catch{
-      }
 
     } catch (error) {
       console.error("로그인 중 오류 발생", error);
@@ -85,7 +79,7 @@ const me = () => {
   return (
     <div>
       <form onSubmit={passwordChack}>
-        <input type="text" value={id} disabled/>
+        <input type="text" value={id} disabled />
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input type="password" placeholder="변경할 비밀번호" value={password} onChange={(e) => setPassword(e.target.value)} />

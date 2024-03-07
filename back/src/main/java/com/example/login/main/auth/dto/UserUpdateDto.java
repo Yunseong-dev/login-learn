@@ -10,5 +10,6 @@ public class UserUpdateDto {
     private String name;
     private String email;
     private String password;
+    private String repassword;
     private LocalDateTime updatedAt;
 }

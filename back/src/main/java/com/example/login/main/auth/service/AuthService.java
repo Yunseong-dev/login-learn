@@ -39,8 +39,9 @@ public class AuthService {
         return new AuthResultDto(jwtUtil.generateToken(user));
     }
 
-    public AuthResultDto PasswordChack(PasswordChackDto dto) {
+    public AuthResultDto UpdateUser(UserUpdateDto dto) {
         User user = userRepository.findById(dto.getId()).orElse(null);
+        LocalDateTime now = LocalDateTime.now();
 
         if (user == null) {
             throw new ResponseStatusException(
@@ -51,19 +52,6 @@ public class AuthService {
         if (!passwordEncoder.matches(dto.getRepassword(), user.getPassword())) {
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST, "비밀번호가 틀렸습니다."
-            );
-        }
-
-        return new AuthResultDto(jwtUtil.generateToken(user));
-    }
-
-    public AuthResultDto UpdateUser(UserUpdateDto dto) {
-        User user = userRepository.findById(dto.getId()).orElse(null);
-        LocalDateTime now = LocalDateTime.now();
-
-        if (user == null) {
-            throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST, "존재하지 않는 아이디입니다."
             );
         }
 

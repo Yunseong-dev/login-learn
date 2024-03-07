@@ -31,13 +31,6 @@ public class AuthController {
         return user;
     }
 
-    @PostMapping("/PC")
-    public AuthResultDto passwordChack(
-            @RequestBody PasswordChackDto dto
-    ){
-        return authService.PasswordChack(dto);
-    }
-
     @PostMapping("/Change")
     public AuthResultDto UpdateUser(
             @RequestBody UserUpdateDto dto
