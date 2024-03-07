@@ -2,10 +2,6 @@ import useToken from "../hooks/userToken";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { customAxios } from "../utils/axios";
-import { useNavigate } from "react-router-dom";
-
-
-
 
 const me = () => {
   const { token, setToken } = useToken();
@@ -14,8 +10,6 @@ const me = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState('');
   const [repassword, setRePassword] = useState('');
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (token) {
