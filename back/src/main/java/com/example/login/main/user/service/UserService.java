@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 
 @Service
 @AllArgsConstructor
-public class SignUpService {
+public class UserService {
     private UserRepository userRepository;
     private JwtUtil jwtUtil;
     private PasswordEncoder passwordEncoder;

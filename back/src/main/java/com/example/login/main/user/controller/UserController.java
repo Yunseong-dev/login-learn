@@ -3,7 +3,7 @@ package com.example.login.main.user.controller;
 
 import com.example.login.main.user.dto.CreateUserDto;
 import com.example.login.main.user.model.User;
-import com.example.login.main.user.service.SignUpService;
+import com.example.login.main.user.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/signup")
 @AllArgsConstructor
-public class SignUpController {
-    private final SignUpService userService;
+public class UserController {
+    private final UserService userService;
 
     @PostMapping("")
     public User createUser(
