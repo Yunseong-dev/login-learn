@@ -26,6 +26,10 @@ const me = () => {
           console.error(error);
         });
     }
+    else{
+      alert("로그인이 필요한 서비스입니다.");
+      navigate("/");
+    }
   }, [token]);
 
   const updateUser = async (e: { preventDefault: () => void; }) => {
