@@ -3,7 +3,6 @@ import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
-  const pk = 0;
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
