@@ -26,6 +26,7 @@ const Main = () => {
           <div>반갑습니다, {name}님!</div>
           <Link to={"/"}><div onClick={removeToken}>로그아웃</div></Link>
           <a href="/me">내정보</a>
+          <a href="/article"></a>
         </>
       ): (
         <>

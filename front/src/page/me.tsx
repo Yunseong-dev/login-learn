@@ -4,7 +4,7 @@ import axios from "axios";
 import { customAxios, fetcherWithToken } from "../utils/axios";
 import { useNavigate } from "react-router-dom";
 
-const me = () => {
+const Me = () => {
   const { token, setToken, removeToken } = useToken();
   const [ id, setId ] = useState("");
   const [ name, setName ] = useState("");
@@ -121,4 +121,4 @@ const me = () => {
   );
 }
 
-export default me;
+export default Me;

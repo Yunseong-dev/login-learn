@@ -2,7 +2,7 @@ import { customAxios } from "../utils/axios";
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SignIn = () => {
+const SignUp = () => {
   const pk = 0;
   const [id, setId] = useState("");
   const [name, setName] = useState("");
@@ -63,4 +63,4 @@ const SignIn = () => {
   );
 }
 
-export default SignIn;
+export default SignUp;
