@@ -38,7 +38,7 @@ const SignUp = () => {
 
   };
 
-  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+  const signUpHandler = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (password !== repassword) {
       alert('비밀번호가 일치하지 않습니다.');
@@ -49,7 +49,7 @@ const SignUp = () => {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={signUpHandler}>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="이름" />
         <input type="text" value={id} onChange={(e) => setId(e.target.value)} placeholder="아이디" />
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="이메일" />
