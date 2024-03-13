@@ -8,11 +8,9 @@ import com.example.login.main.user.model.User;
 import com.example.login.main.user.repository.UserRepository;
 import com.example.login.main.util.JwtUtil;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 
